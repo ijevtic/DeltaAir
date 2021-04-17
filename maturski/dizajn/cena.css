@@ -1,0 +1,50 @@
+.tag {
+	display: inline-block;
+  	width: auto;
+	height: 34px;
+	
+	background-color: #ff7f24;
+	border-radius: 3px 4px 4px 3px;
+	
+	border-left: 1px solid #ff7f24;
+
+	/* This makes room for the triangle */
+	margin-left: 25px;
+	
+	position: relative;
+	
+	color: white;
+	font-weight: 300;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 21px;
+	line-height: 34px;
+	
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* Makes the triangle */
+.tag:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: -17px;
+	width: 0;
+	height: 0;
+	border-top: 17px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-right: 17px solid #ff7f24;
+}
+
+/* Makes the circle */
+.tag:after {
+	content: "";
+	background-color: white;
+	border-radius: 100%;
+	width: 4px;
+	height: 4px;
+	display: block;
+	position: absolute;
+	left: -9px;
+	top: 15px;  /* top + height/2 = height/2 od ukupne visine*/
+}
